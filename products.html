@@ -24,7 +24,7 @@
   <nav class="bg-green-300 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
     <h1 class="text-2xl">Greenden</h1>
 
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+    <svg id="menuicon"    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
       class="size-6 md:hidden">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
@@ -47,13 +47,34 @@
     </ul>
   </nav>
 
+  <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100vh;right: -50%;">
+    <div class="text-right p-5">
+      <p id="close nav"   class="inline cursor-pointer">X</p>
+    </div>
+    <ul class=" flex flex-col items-center  gap-10 text-gray-600 ">
+      <li>
+        <a class="hover:underline" href="index.html">Home</a>
+      </li>
+
+      <li>
+        <a class="hover:underline" href="products.html">Products</a>
+      </li>
+
+      <li>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </li>
+    </ul>
+
+
+  </section>
+
 
    <!-- products page -->
     <section class="text-center">
       <h1 class="text-3xl font-bold mt-5 text-center">Our Products</h1>
-      <input type="text" class="border border-black p-2 m-3" style="width: 80%;" placeholder="Search for products...">
+      <input id="search"   type="text" class="border border-black p-2 m-3" style="width: 80%;" placeholder="Search for products...">
 
-      <div class="grid grid-cols-2 mt-5 gap-5 md:grid-cols-4">
+      <div id="productcontainer" class="grid grid-cols-2 mt-5 gap-5 md:grid-cols-4">
 
         <div>
           <img src="./images/bs1.jpg"   class="inline hover:shadow-xl transform hover:translate-y-2" alt="1">
@@ -112,7 +133,9 @@
       <p>The standard chunk of lorem ipsum used since the 1500rs is reproduced below for those intrest</p>
       <p>@2021 Greenden.com</p>
     </section>
+    
 
+    <script src="product.js"></script>
 
 
 
